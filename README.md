@@ -32,12 +32,10 @@ false, false, false, false, false, false, false
 	2. 'false' means this is an empty cell.
 
 The CLI will output the solution in the console like below:
-<blockquote>
+<pre><code>
 (1, 1) RIGHT
-
 (5, 1) DOWN
-
 (5, 3) RIGHT
-</blockquote>
+</code></pre>
 It is the list of movements you have to take to solve this puzzle. 
 Each movement is consist of "(x, y) DIRECTION" as instruction, which means you have to move the furball in (x, y) with DIRECTION.
