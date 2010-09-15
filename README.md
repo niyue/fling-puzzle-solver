@@ -18,7 +18,7 @@ There's a command line interface to solve Fling puzzle.
 java -jar fling-puzzle-solver-1.0-jar-with-dependencies.jar /path/to/your/puzzle.data
 1. Here fling-puzzle-solver-1.0-jar-with-dependencies.jar is in target directory after running "mvn assembly:assembly".
 2. puzzle.data is a csv file, which is a 7x8 board like below:
- <blockquote>
+ <pre><code>
 FBALL, false, false, false, false, FBALL, false
 false, false, false, false, false, false, false
 false, false, false, false, false, false, FBALL
@@ -27,14 +27,16 @@ false, false, false, false, false, false, false
 false, false, false, false, false, false, false
 false, false, false, false, false, false, false
 false, false, false, false, false, false, false
-</blockquote>
+</code></pre>
 	1. 'FBALL' means there's a fling furball in the cell.
 	2. 'false' means this is an empty cell.
 
 The CLI will output the solution in the console like below:
 <blockquote>
 (1, 1) RIGHT
+
 (5, 1) DOWN
+
 (5, 3) RIGHT
 </blockquote>
 It is the list of movements you have to take to solve this puzzle. 
