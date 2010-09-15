@@ -119,6 +119,22 @@ public class PuzzleTest extends TestCase {
 		assertEquals(6, solution.size());
 		print(solution);
 	}
+	
+	public void testRealIV() throws Exception {
+		Board board = new Board(new boolean[][] {
+				{FBALL, false, false, false, false, FBALL, false},
+				{false, false, false, false, false, false, false},
+				{false, FBALL, false, false, false, false, false},	
+				{FBALL, false, false, false, false, false, false},	
+				{false, false, false, false, false, FBALL, false},	
+				{false, false, false, FBALL, false, false, false},
+				{false, FBALL, FBALL, FBALL, FBALL, false, false},	
+				{false, false, false, FBALL, FBALL, false, false}	
+		});
+		Stack<Movement> solution = new FlingPuzzleSolver().solve(board);
+		assertEquals(11, solution.size());
+		print(solution);
+	}
 	private void print(Stack<Movement> solution) {
 		System.out.println("====================");
 		for(Movement movement : solution) {

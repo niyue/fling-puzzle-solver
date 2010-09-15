@@ -5,6 +5,19 @@ import static com.niyue.fling.Direction.*;
 
 public class FlingPuzzleSolver {
 	private static Stack<Movement> NO_SOLUTION = null;
+	public static void main(String[] args) {
+		String filePath = args[0];
+		Board board = BoardLoader.load(filePath);
+		Stack<Movement> solution = new FlingPuzzleSolver().solve(board);
+		if(solution != NO_SOLUTION) {
+			for(Movement movement : solution) {
+				System.out.println(String.format("(%s, %s) %s", movement.getX() + 1, movement.getY() + 1, movement.getDirection()));
+			}
+		}
+		else {
+			System.out.println("No solution can be found for this puzzle.");
+		}
+	}
 	public Stack<Movement> solve(Board board) {
 		Stack<Movement> solution = NO_SOLUTION;
 		if(board.isSolved()) {
