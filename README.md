@@ -15,8 +15,9 @@ Build and Installation
 Usage
 ======================
 There's a command line interface to solve Fling puzzle. 
+<pre><code>
 java -jar fling-puzzle-solver-1.0-jar-with-dependencies.jar /path/to/your/puzzle.data
-
+</code></pre>
 1. Here fling-puzzle-solver-1.0-jar-with-dependencies.jar is in target directory after running "mvn assembly:assembly".
 2. puzzle.data is a csv file, which is a 7x8 board like below:
  <pre><code>
