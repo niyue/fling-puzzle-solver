@@ -1,0 +1,111 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Fling-puzzle-solver</title>
+  <meta name="description" content="A simple program used to solve puzzles in Fling">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Fling-puzzle-solver</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">A simple program used to solve puzzles in Fling</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/niyue/fling-puzzle-solver/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/niyue/fling-puzzle-solver/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/niyue/fling-puzzle-solver" class="code">View Fling-puzzle-solver on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>Fling puzzle solver</h1>
+
+<p>This program is written to solve puzzles in Fling, an iPhone puzzle game.</p>
+
+<p><img src="http://farm5.static.flickr.com/4153/4993541140_e606ce387d.jpg" alt="Fling iPhone app screenshot" title="Fling! iPhone app screenshot"></p>
+
+<h1>Build and Installation</h1>
+
+<ol>
+<li>Install Apache Maven</li>
+<li>Download source code</li>
+<li>mvn assembly:assembly</li>
+<li>It's done.</li>
+</ol><h1>Usage</h1>
+
+<p>There's a command line interface to solve Fling puzzle. </p>
+
+<pre><code>
+java -jar fling-puzzle-solver-1.0-jar-with-dependencies.jar /path/to/your/puzzle.data
+</code></pre>
+
+<ol>
+<li>Here fling-puzzle-solver-1.0-jar-with-dependencies.jar is in target directory after running "mvn assembly:assembly".</li>
+<li>puzzle.data is a csv file, which is a 7x8 board like below:
+<pre><code>
+FBALL, false, false, false, false, FBALL, false
+false, false, false, false, false, false, false
+false, false, false, false, false, false, FBALL
+false, false, false, false, FBALL, false, false
+false, false, false, false, false, false, false
+false, false, false, false, false, false, false
+false, false, false, false, false, false, false
+false, false, false, false, false, false, false
+</code></pre>
+
+<ol>
+<li>'FBALL' means there's a fling furball in the cell.</li>
+<li>'false' means this is an empty cell.</li>
+</ol>
+</li>
+</ol><p>The CLI will output the solution in the console like below:</p>
+
+<pre><code>
+(1, 1) RIGHT
+(5, 1) DOWN
+(5, 3) RIGHT
+</code></pre>
+
+<p>It is the list of movements you have to take to solve this puzzle. 
+Each movement is consist of "(x, y) DIRECTION" as instruction, which means you have to move the furball in (x, y) with DIRECTION.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/niyue" class="avatar"><img src="https://secure.gravatar.com/avatar/8425457b7317576680146aa8149be472?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" width="48" height="48"/></a> <a href="https://github.com/niyue">niyue</a> maintains <a href="https://github.com/niyue/fling-puzzle-solver">Fling-puzzle-solver</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/niyue/fling-puzzle-solver/tarball/master" class="tar">tar</a><a href="https://github.com/niyue/fling-puzzle-solver/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
+</html>
